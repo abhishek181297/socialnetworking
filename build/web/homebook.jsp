@@ -4,6 +4,7 @@
     Author     : abhishek
 --%>
 
+<%@page import="javax.swing.JOptionPane"%>
 <%@page import="mypackage.DatabaseConnect"%>
 <%@page import="java.util.Calendar"%>
 <%@page import="java.sql.ResultSet"%>
@@ -40,9 +41,9 @@
             
             <div class="topnavlinks" style="float:left;margin-left: 100px;">
                  <a class="active" href="homebook.jsp">Home</a>
-          <a href="About.jsp">Profile</a>
+          <a href="Timeline.jsp">Profile</a>
           <a href="#contact">Chat</a>
-          <a href="Timeline.jsp">Timeline</a>
+          
           
             </div>
             
@@ -82,7 +83,7 @@
                 <br> <br>  <br> <br> <br> <br>  
                 <div>
                    <ul type="square">
-    <li><a href= "About.jsp">Profile</a></li>
+    <li><a href= "Timeline.jsp">Profile</a></li>
     <li><a href= "photos.jsp">Photos</a></li>
     <li><a href= "Friends.jsp">Friends</a></li>
     <li><a href= "changepass.jsp">Change Password</a></li>
@@ -169,7 +170,7 @@
                    <ul type="square">
     <li><a href= "About.jsp">Messages</a></li>
     <li><a href= https://google.com>Notification</a></li>
-    <li><a href= "request.jsp">Request</a></li>
+    <li><a href= "request.jsp">Request - <span id="total" style="color: #6df2ff"></span></a></li>
     <li><a href= "asknit.jsp">Ask@NITJSR</a></li>
 </ul>
                 </div>
@@ -878,7 +879,38 @@
                        extradiv.style.height = "100px";
                        centerdiv.appendChild(extradiv);   
        </script>
-        
+        <script>
+      <%    
+     
+         try{
+            
+            String gmail =(String) request.getSession().getAttribute("email");
+            
+             query="select count(*) as total from Request where receiver=?;";
+             
+             
+           
+            PreparedStatement ps= conn.prepareStatement(query);
+            ps.setString(1, gmail);
+             rs = ps.executeQuery();
+            if(rs.next()){
+               int count=rs.getInt("total");
+               %>
+                var countdiv = document.getElementById('total');
+                var totreq=document.createTextNode("<%=count%>");
+                 countdiv.appendChild(totreq);
+                 <%
+            }
+         }
+         catch(Exception ex)
+         {
+             JOptionPane.showMessageDialog(null,ex);
+         }
+             
+           
+      
+     %>  
+   </script>
         
         
        

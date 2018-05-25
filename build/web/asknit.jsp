@@ -69,9 +69,9 @@
             
             <div class="topnavlinks" style="float:left;margin-left: 100px;">
                  <a  href="homebook.jsp">Home</a>
-          <a href="About.jsp">Profile</a>
+          <a href="Timeline.jsp">Profile</a>
           <a href="#contact">Chat</a>
-         <a class="active" href="asknit.jsp">Ask Nit</a>
+         
             </div>
             
             <div class="topnavbutton" >
@@ -111,10 +111,7 @@
  <br> <br>  <br> <br> <br> <br>  
                 <div>
                    <ul type="square">
-    <li><a href= "About.jsp">Profile</a></li>
-    <li><a href= "photos.jsp">Photos</a></li>
-    <li><a href= "Friends.jsp">Friends</a></li>
-    <li><a href= "changepass.jsp">Change Password</a></li>
+   
     <li onclick="ansFoc()"><a href="#" ><u>Ask A Question</u></a></li>
      <li onclick="seeQsns()"><a href="#" ><u>Your Questions</u></a></li>
 </ul>
@@ -171,10 +168,7 @@
                    <ul type="square">
                        <li  onclick="ansQsn()"><a href= "#" >Answer a question</a></li>
     <li  onclick="seeAns()"><a href= "#">Your Answers</a></li>
-    <li><a href= "About.jsp">Messages</a></li>
-    <li><a href= https://google.com>Notification</a></li>
-    <li><a href= "request.jsp">Request</a></li>
-    <li><a href= "asknit.jsp">Ask@NITJSR</a></li>
+    
     
 </ul>
                 </div>
