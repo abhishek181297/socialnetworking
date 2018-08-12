@@ -16,3 +16,5 @@ To change the username and password for databases go to the file /src/java/mypac
 and change the username from "root" with your database username
 and password "prince181297" with your database password
 
+The Dump20180812.sql file contains the database . You can use import it into your database.
+
