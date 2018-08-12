@@ -18,3 +18,11 @@ and password "prince181297" with your database password
 
 The Dump20180812.sql file contains the database . You can use import it into your database.
 
+IMPORTANT:
+Go to pages profilecontroller.jsp and profilecontroller1.jsp
+and change two lines lines 33 and 46
+1. String path = "/home/abhishek/NetBeansProjects/Social Networking/web/coverphotos";
+with your relative path
+2. new File("/home/abhishek/profilepictemp") here make a temporary folder profilepictemp at any location in your computer give the path of that folder in above place .
+
+
